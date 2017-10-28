@@ -192,6 +192,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1291242007 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1558237237684394, guid: d61ca4a1649a146489f8dbfeaf0e257a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1539287316}
+--- !u!114 &1291242008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1291242007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4aac6fa789e3aed4998d788bc28aa205, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skellyMaterial: {fileID: 2100000, guid: b2134673a2d194fcca397b8bb6dd9947, type: 2}
+  Active: {r: 0.3738842, g: 0, b: 0.53676474, a: 1}
+  Passive: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1301636135
 GameObject:
   m_ObjectHideFlags: 0
@@ -428,6 +447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b531f336dfee5f438f94ed501caefc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fader: {fileID: 1291242008}
   sensorHeight: 1
   sensorAngle: 0
   autoHeightAngle: 0
