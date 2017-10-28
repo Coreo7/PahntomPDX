@@ -15,6 +15,7 @@ using System.Collections.Generic;
 /// </summary>
 public class KinectManager : MonoBehaviour 
 {
+    public SkellyFade fader;
 	[Tooltip("How high above the ground is the sensor, in meters.")]
 	public float sensorHeight = 1.0f;
 
@@ -2724,6 +2725,7 @@ public class KinectManager : MonoBehaviour
 			// update the avatars
 			if(!lateUpdateAvatars)
 			{
+                print("Avatart");
 				foreach (AvatarController controller in avatarControllers)
 				{
 					//int userIndex = controller ? controller.playerIndex : -1;
@@ -3795,7 +3797,9 @@ public class KinectManager : MonoBehaviour
 					// no empty user-index slot
 					return;
 				}
-				
+                //insert non Idle here
+                fader.FadeMaterial(false);
+
 				Debug.Log("Adding user " + uidIndex + ", ID: " + userId + ", Body: " + bodyIndex);
 
 				dictUserIdToIndex[userId] = bodyIndex;
@@ -3856,6 +3860,9 @@ public class KinectManager : MonoBehaviour
 		//int uidIndex = alUserIds.IndexOf(userId);
 		int uidIndex = Array.IndexOf(aUserIndexIds, userId);
 		Debug.Log("Removing user " + uidIndex + ", ID: " + userId + ", Body: " + dictUserIdToIndex[userId]);
+
+        //Go back to idle
+        fader.FadeMaterial(true);
 
 //		// reset the respective avatar controllers
 //		for(int i = 0; i < avatarControllers.Count; i++)
