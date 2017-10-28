@@ -209,6 +209,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skellyMaterial: {fileID: 2100000, guid: b2134673a2d194fcca397b8bb6dd9947, type: 2}
+  Active: {r: 0.3738842, g: 0, b: 0.53676474, a: 1}
+  Passive: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1301636135
 GameObject:
   m_ObjectHideFlags: 0
@@ -445,6 +447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b531f336dfee5f438f94ed501caefc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fader: {fileID: 1291242008}
   sensorHeight: 1
   sensorAngle: 0
   autoHeightAngle: 0
